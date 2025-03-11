@@ -64,7 +64,9 @@
 .highlight-text{
     color: black;
 }
-
+.yellow-text{
+    color: var(--primary-color);
+}
 .underline {
     position: relative;
     display: inline-block;
