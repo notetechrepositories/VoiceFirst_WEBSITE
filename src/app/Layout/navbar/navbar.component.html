@@ -1,0 +1,101 @@
+<nav class="nav-container">
+    <div class="nav-logo">
+      <!-- <img src="assets/images/logo.png" alt="logo" /> -->
+      <h1>VOICE FIRST</h1>
+    </div>
+    <ul class="nav-list" [class.nav-active]="isMenuOpen">
+      <li><a routerLink="/home">Home</a></li>
+      <li><a routerLink="/about">About</a></li>
+      <li><a routerLink="/what-is">What Is</a></li>
+      <li><a routerLink="/how-it-works">How it works</a></li>
+      <li><a routerLink="/use-case">Use cases</a></li>
+      <li><a href="#">Case studies</a></li>
+      <li><a href="#">Subscription</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Contact us</a></li>
+    
+    </ul>
+
+    <div class="nav-toggle" (click)="toggleMenu()">
+      <span class="nav-line" [class.nav-toggle-active]="isMenuOpen"></span>
+      <span class="nav-line" [class.nav-toggle-active]="isMenuOpen"></span>
+      <span class="nav-line" [class.nav-toggle-active]="isMenuOpen"></span>
+    </div>
+  </nav>
+  
+  <!-- Overlay -->
+<div class="nav-overlay" [class.active]="isMenuOpen" (click)="toggleMenu()"></div>
+
+<!-- Mobile Menu -->
+<div class="nav-menu" [class.nav-menu-active]="isMenuOpen">
+  <ul class="nav-menu-list">
+    <li><a routerLink="/home">Home</a></li>
+    <li><a routerLink="/about">About</a></li>
+    <li><a routerLink="/what-is">What Is</a></li>
+    <li><a routerLink="/use-case">Use cases</a></li>
+    <li><a href="#">Case studies</a></li>
+    <li><a href="#">How it works</a></li>
+    <li><a href="#">Subscription</a></li>
+    <li><a href="#">Blog</a></li>
+    <li><a href="#">FAQ</a></li>
+    <li class="mb-0"><a href="#">Contact us</a></li>  
+  </ul>
+</div>
+
+  <main>
+    <router-outlet/>
+  </main>
+
+  <footer class="vf-footer">
+    <div class="vf-container vf-row">
+      <div class="vf-footer-col">
+        <div class="nav-logo">
+          <!-- <img src="assets/images/logo.png" alt="logo" /> -->
+          <h1>VOICE FIRST</h1>
+        </div>
+        <p></p>
+      </div>
+      <div class="vf-footer-col">
+        <h4>company</h4>
+        <ul>
+          <li><a href="#">about us</a></li>
+          <li><a href="#">our services</a></li>
+          <li><a href="#">privacy policy</a></li>
+          <li><a href="#">visit website</a></li>
+        </ul>
+      </div>
+      <div class="vf-footer-col">
+        <h4>get help</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">support</a></li>
+          <li><a href="#">contact us</a></li>
+        </ul>
+      </div>
+      <!-- <div class="vf-footer-col">
+        <h4>resources</h4>
+        <ul>
+          <li><a href="#">download</a></li>
+          <li><a href="#">changelog</a></li>
+          <li><a href="#">documentation</a></li>
+          <li><a href="#">all versions</a></li>
+        </ul>
+      </div> -->
+      <div class="vf-footer-col">
+        <h4>follow us</h4>
+        <div class="vf-social-links">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!--  -->
+  <a href="#top" class="go-top active" aria-label="Go To Top" data-go-top>
+    <!-- <ion-icon name="arrow-up-outline"></ion-icon> -->
+  </a>
+  

@@ -1,0 +1,516 @@
+/*--------------- Hero Section----------------- */
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--primary-color);
+    min-height: 60vh; /* Ensures full height on larger screens */
+}
+
+/* Left Side - Image & Text */
+.hero-section-1 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: start;
+    background: url("https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") 
+                no-repeat center center;
+    background-size: cover;
+    min-height: 100%;
+    position: relative;
+    padding: 30px 60px;
+}
+
+/* Dark overlay on image */
+.hero-section-1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* Text inside Hero */
+.hero-section-1 h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section-1 .heading1 {
+    color: var(--primary-color);
+}
+
+.hero-section-1 .heading2 {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--primary-color);
+}
+
+/* Right Side - Text */
+.hero-section-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    text-align: center;
+    padding: 30px 60px;
+    min-height: 100%;
+}
+
+.hero-section-2 p {
+    font-style: italic;
+    font-size: 1rem;
+    max-width: 600px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .hero-section-1,
+    .hero-section-2 {
+        width: 100%;
+        min-height: 50vh;
+        padding: 40px;
+    }
+
+    .hero-section-1 h1 {
+        font-size: 3.5rem;
+    }
+
+    .hero-section-2 p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .hero-section-1,
+    .hero-section-2 {
+        width: 100%;
+        min-height: auto;
+        padding:60px 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-section-1 h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .hero-section-2 p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section-1 h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section-2 p {
+        font-size: 0.9rem;
+        padding: 20px;
+    }
+}
+
+
+/* ------------- What is ----------- */
+
+.whatis-bg{
+    width: 100%;
+    height:500px;
+    background: url("/assets/images/Thinkingface.png") no-repeat center center;
+    background-size: contain;
+}
+
+
+.vf-how {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Heading Styling */
+.vf-how h5 {
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.vf-how h5 span {
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+}
+
+/* Underline Effect */
+.vf-how h5 span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 3px;
+}
+
+/* Centering Content */
+.how-content {
+    display: flex;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Custom List Styling */
+.custom-list {
+    list-style: none;
+    padding-left: 0;
+    line-height: 2;
+    color: #6b6b6b;
+    font-weight: 400;
+    text-align: left;
+}
+
+/* List Items */
+.custom-list li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 15px;
+}
+
+
+.custom-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+@media (max-width: 768px) {
+    .vf-how {
+        padding: 40px 15px;
+    }
+
+    .custom-list li {
+        padding-left: 35px;
+    }
+
+    .custom-list li::before {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .vf-how h5 {
+        font-size: 1.4rem;
+    }
+
+    .custom-list {
+        line-height: 1.8;
+    }
+
+    .custom-list li {
+        font-size: 0.95rem;
+        padding-left: 30px;
+    }
+
+    .custom-list li::before {
+        font-size: 1rem;
+    }
+}
+
+
+/* --------- About Company ----------- */
+
+.about-company {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 80vh; 
+    
+}
+
+/* Left Side - Image & Text */
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: start;
+    background: url("https://images.pexels.com/photos/273209/pexels-photo-273209.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") 
+                no-repeat center center;
+    background-size: cover;
+    min-height: 100%;
+    position: relative;
+    padding: 30px 60px;
+}
+
+/* Dark overlay on image */
+.left-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* Text inside Hero */
+.left-section h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+}
+
+.left-section .heading1 {
+    color: var(--primary-color);
+}
+
+.left-section .heading2 {
+    color: transparent;
+    -webkit-text-stroke: 1px var(--primary-color);
+}
+
+/* Right Side - Text */
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 60px;
+    min-height: 100%;
+    border-left: 10px solid #fff;
+}
+
+.right-section p ,a{
+    font-style: italic;
+    font-size: 1.2rem;
+    max-width: 650px;
+    text-decoration: none;
+    color: black;
+}
+
+.company-logo{
+    height:70px;
+    margin-bottom: 40px;
+}
+
+.ctabtn-1 {
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    border: none;
+    cursor: pointer;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2vw, 1.1rem); /* Scales with screen size */
+    padding: 0.75rem 1.5rem;
+    max-width: 100%;
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .ctabtn-1:hover {
+    background-color: #222; /* Slight lightening effect */
+    color: var(--primary-color);
+  }
+  
+  .button__icon-wrapper {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    color:#fff;
+    background-color: #000000;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 2px solid #fff;
+  }
+  
+  .ctabtn-1:hover {
+    background-color: #000;
+    color: var(--primary-color);
+   
+  }
+  
+  .ctabtn-1:hover .button__icon-wrapper {
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+  }
+  
+  .button__icon-svg--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+  
+  .ctabtn-1:hover .button__icon-svg:first-child {
+    transition: transform 0.3s ease-in-out;
+    transform: translate(150%, -150%);
+  }
+  
+  .ctabtn-1:hover .button__icon-svg--copy {
+    transition: transform 0.3s ease-in-out 0.1s;
+    transform: translate(0); /* Move to center */
+  }
+  
+  /* Second CTA Button */
+  /* Second CTA Button */
+.ctabtn-2 {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #1A1A1A;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2vw, 1.1rem); /* Scales with screen size */
+    padding: 0.95rem 1.5rem;
+    max-width: 100%;
+    line-height: normal;
+    margin: 00px 0px 0px 10px;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+   font-style:normal;
+    will-change: transform;
+  }
+  
+  .ctabtn-2:disabled {
+    pointer-events: none;
+  }
+  
+  .ctabtn-2:hover {
+    color: var(--primary-color);
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-1px);
+  }
+  
+  .ctabtn-2:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        min-height: 50vh;
+        padding: 40px;
+    }
+
+    .left-section h1 {
+        font-size: 3.5rem;
+    }
+
+    .right-section p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        padding:60px 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .right-section{
+        border: 2px solid var(--primary-color);
+    }
+
+    .left-section h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .right-section p {
+        font-size: 1rem;
+    }
+    .ctabtn-1, .ctabtn-2 {
+        width: 100%;
+        font-size: 1rem;
+      }
+    
+      .ctabtn-2{
+        padding: 16px 10px;
+      }
+    
+      .button__icon-wrapper {
+        width: 20px;
+        height: 20px;
+      }
+}
+
+@media (max-width: 480px) {
+    .left-sectionh1 {
+        font-size: 2.5rem;
+    }
+
+    .right-section p {
+        font-size: 0.9rem;
+        padding: 20px;
+    }
+
+    .ctabtn-1{
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+      }
+    .ctabtn-2 {
+      padding: 1.1rem 1rem;
+      font-size: 0.9rem;
+      }
+}
