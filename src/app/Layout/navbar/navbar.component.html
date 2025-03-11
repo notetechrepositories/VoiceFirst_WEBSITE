@@ -4,16 +4,15 @@
       <h1>VOICE FIRST</h1>
     </div>
     <ul class="nav-list" [class.nav-active]="isMenuOpen">
-      <li><a routerLink="/home">Home</a></li>
-      <li><a routerLink="/about">About</a></li>
-      <li><a routerLink="/what-is">What Is</a></li>
-      <li><a routerLink="/how-it-works">How it works</a></li>
-      <li><a routerLink="/use-case">Use cases</a></li>
-      <li><a href="#">Case studies</a></li>
-      <li><a href="#">Subscription</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">FAQ</a></li>
-      <li><a href="#">Contact us</a></li>
+      <li><a routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active-link">About</a></li>
+      <li><a routerLink="/what-is" routerLinkActive="active-link">What Is</a></li>
+      <li><a routerLink="/how-it-works" routerLinkActive="active-link">How it works</a></li>
+      <li><a routerLink="/use-case" routerLinkActive="active-link">Use cases</a></li>
+      <li><a routerLink="/our-impact" routerLinkActive="active-link">Our Impact</a></li>
+      <li><a routerLink="/pricing" routerLinkActive="active-link">Pricing</a></li>
+      <li><a routerLink="/faq" routerLinkActive="active-link">FAQ</a></li>
+      <li><a routerLink="/contact-us" routerLinkActive="active-link">Contact us</a></li>
     
     </ul>
 
@@ -34,7 +33,7 @@
     <li><a routerLink="/about">About</a></li>
     <li><a routerLink="/what-is">What Is</a></li>
     <li><a routerLink="/use-case">Use cases</a></li>
-    <li><a href="#">Case studies</a></li>
+    <li><a routerLink="/our-impact">Our Impact</a></li>
     <li><a href="#">How it works</a></li>
     <li><a href="#">Subscription</a></li>
     <li><a href="#">Blog</a></li>

@@ -1,0 +1,280 @@
+.hero {
+    height: 60vh;
+    padding: 20px;
+}
+
+.header-img {
+    background: url("/assets/images/FAQ.png") no-repeat center center;
+    background-size: contain; /* Show the entire image */
+    background-repeat: no-repeat;
+    
+    height: 60vh;
+    width: 80%;
+}
+
+/* Optional: Make it responsive for smaller screens */
+@media (max-width: 992px) {
+    .hero{
+        height: 40vh;
+    }
+    .header-img {
+        height: 50vh;
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero{
+        height: 30vh;
+    }
+    .header-img {
+        height: 40vh;
+        width: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-img {
+        height: 30vh;
+        width: 100%;
+    }
+}
+
+
+
+.faq .faq-list {
+    padding: 0 100px;
+  }
+  
+  .faq .faq-list ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .faq .faq-list li+li {
+    margin-top: 15px;
+  }
+  
+  .faq .faq-list li {
+    padding: 20px;
+    background: #fff;
+    border-radius: 4px;
+    position: relative;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .faq .faq-list a {
+    display: block;
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 0 30px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    margin-left: 10px;
+  }
+  
+  .faq .faq-list .icon-help {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    left: 20px;
+    color: var(--primary-color);
+  }
+  
+  .faq .faq-list .icon-show,
+  .faq .faq-list .icon-close {
+    font-size: 24px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  .faq .faq-list p {
+    margin-bottom: 0;
+    padding: 10px 0px 0px 40px;
+  }
+  
+  .faq .faq-list .icon-show {
+    display: none;
+  }
+  
+  .faq .faq-list a.collapsed {
+    transition: 0.3s;
+    color: #000000;
+    margin-left: 10px;
+  }
+  
+  .faq .faq-list a.collapsed:hover {
+    color: var(--primary-color);
+  }
+  
+  .faq .faq-list a.collapsed .icon-show {
+    display: inline-block;
+  }
+  
+  .faq .faq-list a.collapsed .icon-close {
+    display: none;
+  }
+  
+  @media (max-width: 1200px) {
+    .faq .faq-list {
+      padding: 0;
+    }
+  }
+
+  .contact-card{
+    padding:30px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+/* cta button */
+
+.ctabtn-1 {
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    border: none;
+    cursor: pointer;
+    background-color: #000000;
+    color: var(--primary-color);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2vw, 1.1rem); /* Scales with screen size */
+    padding: 0.75rem 1.5rem;
+    max-width: 100%;
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+    font-style: normal;
+  }
+  
+  .ctabtn-1:hover {
+    background-color: #222; /* Slight lightening effect */
+    color: var(--primary-color);
+  }
+  
+  .button__icon-wrapper {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    color:var(--primary-color);
+    background-color: #000000;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 2px solid var(--primary-color);
+  }
+  
+  .ctabtn-1:hover {
+    background-color: #000;
+    color: var(--primary-color);
+   
+  }
+  
+  .ctabtn-1:hover .button__icon-wrapper {
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+  }
+  
+  .button__icon-svg--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+  
+  .ctabtn-1:hover .button__icon-svg:first-child {
+    transition: transform 0.3s ease-in-out;
+    transform: translate(150%, -150%);
+  }
+  
+  .ctabtn-1:hover .button__icon-svg--copy {
+    transition: transform 0.3s ease-in-out 0.1s;
+    transform: translate(0); /* Move to center */
+  }
+  
+  /* Second CTA Button */
+  /* Second CTA Button */
+.ctabtn-2 {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #1A1A1A;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2vw, 1.1rem); /* Scales with screen size */
+    padding: 0.95rem 1.5rem;
+    max-width: 100%;
+    line-height: normal;
+    margin: 00px 0px 0px 10px;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+   font-style:normal;
+    will-change: transform;
+  }
+  
+  .ctabtn-2:disabled {
+    pointer-events: none;
+  }
+  
+  .ctabtn-2:hover {
+    color: var(--primary-color);
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-1px);
+  }
+  
+  .ctabtn-2:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+
+
+@media (max-width: 768px) {
+
+    .ctabtn-1, .ctabtn-2 {
+        width: 100%;
+        font-size: 1rem;
+      }
+    
+      .ctabtn-2{
+        padding: 16px 10px;
+      }
+    
+      .button__icon-wrapper {
+        width: 20px;
+        height: 20px;
+      }
+}
+
+@media (max-width: 480px) {
+
+    .ctabtn-1{
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+      }
+    .ctabtn-2 {
+      padding: 1.1rem 1rem;
+      font-size: 0.9rem;
+      }
+}

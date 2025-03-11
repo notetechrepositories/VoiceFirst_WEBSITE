@@ -1,0 +1,249 @@
+.hero{
+    height: 60vh;
+    background-color: antiquewhite;
+}
+
+
+/*  */
+
+.offer-part{
+    padding:10px;
+    text-align: center;
+    background-color: var(--primary-color);
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.case-card {
+    padding: 30px;
+    border: 3px solid rgb(233, 233, 233);
+    border-radius: 9px;
+    background-color: #fff; /* optional: background for better readability */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* optional hover effect */
+}
+
+
+.case-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.case-card h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: left; /* you can use center on mobile if preferred */
+}
+
+.case-card p {
+    margin-bottom: 0.75rem;
+    text-align: justify; /* makes paragraphs easier to read */
+    font-size: 1rem;
+}
+
+.case-card ul {
+   
+    margin-top: 0.5rem;
+}
+
+.case-card ul li {
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-size: 1rem;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .case-card {
+        padding: 20px;
+    }
+
+    .case-card h5 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .case-card p, .case-card ul li {
+        font-size: 0.95rem;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .case-card {
+        padding: 15px;
+    }
+
+    .case-card h5 {
+        font-size: 1rem;
+    }
+
+}
+
+
+/* --------------------------- */
+
+
+@media (max-width: 768px) {
+    .pricing-container > div {
+      min-width: 80%;
+      
+    }
+  }
+
+  /* Flexbox container for responsive layout */
+  .pricing-container {
+    margin: 30px auto;
+    padding: 40px 20px;
+    max-width: 1000px;
+    min-width: 200px;
+    background-color: #fffdf7;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+
+  .pricing-container > div {
+    max-width: calc(100% / 3);
+    min-width: 300px;
+    background-color: var(--black);
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+    border: 3px solid var(--primary-color);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
+  .pricing-container h3 {
+    margin: 40px 0 10px;
+  }
+
+  .pricing-container h5 {
+    color: grey;
+    margin-bottom: 20px;
+  }
+
+  .pricing-container h5 > span {
+    font-size: 30px;
+    color: var(--primary-color);
+    &::before {
+      content: "$";
+      font-size: smaller;
+      vertical-align: top;
+    }
+  }
+
+  .pricing-container p {
+    color: gray;
+    margin-bottom: 15px;
+  }
+
+
+
+  /* the sticky header */
+
+  div:nth-child(2) {
+    position: relative;
+    & .head {
+      position: absolute;
+      background-color: var(--primary-color);
+      color: white;
+      width: 80%;
+      height: 30px;
+      padding: 5px;
+      font-size: 0.8em;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        transform: rotate(45deg);
+        border: 10px solid var(--primary-color);
+      }
+      &::before {
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        left: -10px;
+      }
+      &::after {
+        border-left-color: transparent;
+        border-bottom-color: transparent;
+        border-right-color: transparent;
+        right: -10px;
+      }
+    }
+  }
+
+
+  /* Custom List Styling */
+  .custom-list {
+    list-style: none;
+    padding-left: 0;
+    line-height: 2;
+    color: #6b6b6b;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+}
+
+/* List Items */
+.custom-list li {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 681px; 
+}
+
+/* Checkmark Icon */
+.custom-list li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+@media (max-width: 768px) {
+
+    .custom-list li {
+        padding-left: 35px;
+    }
+
+    .custom-list li::before {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .custom-list {
+        line-height: 1.8;
+    }
+
+    .custom-list li {
+        font-size: 0.95rem;
+        padding-left: 30px;
+    }
+
+    .custom-list li::before {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+

@@ -10,6 +10,10 @@ import { AboutusComponent } from './Pages/aboutus/aboutus.component';
 import { FeaturesComponent } from './Pages/features/features.component';
 import { HowitworksComponent } from './Pages/howitworks/howitworks.component';
 import { UsecaseComponent } from './Pages/usecase/usecase.component';
+import { CasestudyComponent } from './Pages/casestudy/casestudy.component';
+import { PricingComponent } from './Pages/pricing/pricing.component';
+import { FaqComponent } from './Pages/faq/faq.component';
+import { ContactComponent } from './Pages/contact/contact.component';
 
 
 @NgModule({
@@ -21,7 +25,11 @@ import { UsecaseComponent } from './Pages/usecase/usecase.component';
     AboutusComponent,
     FeaturesComponent,
     HowitworksComponent,
-    UsecaseComponent
+    UsecaseComponent,
+    CasestudyComponent,
+    PricingComponent,
+    FaqComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

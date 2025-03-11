@@ -1,0 +1,367 @@
+
+.about-company {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 60vh; 
+    
+}
+
+/* Left Side - Image & Text */
+.left-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: start;
+    background: url("/assets/images/success-img.jpg") 
+                no-repeat center center;
+    background-size: cover;
+    min-height: 100%;
+    position: relative;
+    padding: 30px 60px;
+}
+
+/* Dark overlay on image */
+.left-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+/* Text inside Hero */
+.left-section h1 {
+    color: var(--primary-color);
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 1px;
+}
+
+.left-section .heading1 {
+    font-size: 1.4rem;
+}
+
+.left-section .heading2 {
+    font-size: 4rem;
+}
+
+/* Right Side - Text */
+.right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 60px;
+    min-height: 100%;
+    border-left: 10px solid #fff;
+}
+
+.right-section p ,a{
+    font-style: italic;
+    font-size: 1.1rem;
+    max-width: 650px;
+    text-decoration: none;
+    color: black;
+}
+
+.company-logo{
+    height:70px;
+    margin-bottom: 40px;
+}
+
+.ctabtn-1 {
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    border: none;
+    cursor: pointer;
+    background-color: #000000;
+    color: #fff;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2vw, 1.1rem); /* Scales with screen size */
+    padding: 0.75rem 1.5rem;
+    max-width: 100%;
+    white-space: nowrap;
+    transition: all 0.3s ease-in-out;
+    font-style: normal;
+  }
+  
+  .ctabtn-1:hover {
+    background-color: #222; /* Slight lightening effect */
+    color: var(--primary-color);
+  }
+  
+  .button__icon-wrapper {
+    flex-shrink: 0;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    color:#fff;
+    background-color: #000000;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    border: 2px solid #fff;
+  }
+  
+  .ctabtn-1:hover {
+    background-color: #000;
+    color: var(--primary-color);
+   
+  }
+  
+  .ctabtn-1:hover .button__icon-wrapper {
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+  }
+  
+  .button__icon-svg--copy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+  }
+  
+  .ctabtn-1:hover .button__icon-svg:first-child {
+    transition: transform 0.3s ease-in-out;
+    transform: translate(150%, -150%);
+  }
+  
+  .ctabtn-1:hover .button__icon-svg--copy {
+    transition: transform 0.3s ease-in-out 0.1s;
+    transform: translate(0); /* Move to center */
+  }
+  
+  /* Second CTA Button */
+  /* Second CTA Button */
+.ctabtn-2 {
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #1A1A1A;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2vw, 1.1rem); /* Scales with screen size */
+    padding: 0.95rem 1.5rem;
+    max-width: 100%;
+    line-height: normal;
+    margin: 00px 0px 0px 10px;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+   font-style:normal;
+    will-change: transform;
+  }
+  
+  .ctabtn-2:disabled {
+    pointer-events: none;
+  }
+  
+  .ctabtn-2:hover {
+    color: var(--primary-color);
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-1px);
+  }
+  
+  .ctabtn-2:active {
+    box-shadow: none;
+    transform: translateY(0);
+  }
+  
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        min-height: 50vh;
+        padding: 40px;
+    }
+
+    .left-section h1 {
+        font-size: 3.5rem;
+    }
+
+    .right-section p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        padding:60px 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .right-section{
+        border: 2px solid var(--primary-color);
+    }
+
+    .left-section h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .right-section p {
+        font-size: 1rem;
+    }
+    .ctabtn-1, .ctabtn-2 {
+        width: 100%;
+        font-size: 1rem;
+      }
+    
+      .ctabtn-2{
+        padding: 16px 10px;
+      }
+    
+      .button__icon-wrapper {
+        width: 20px;
+        height: 20px;
+      }
+}
+
+@media (max-width: 480px) {
+    .left-sectionh1 {
+        font-size: 2.5rem;
+    }
+
+    .right-section p {
+        font-size: 0.9rem;
+        padding: 20px;
+    }
+
+    .ctabtn-1{
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
+      }
+    .ctabtn-2 {
+      padding: 1.1rem 1rem;
+      font-size: 0.9rem;
+      }
+}
+
+
+
+
+/* ----------------------- */
+
+.case-card {
+    padding: 30px;
+    border: 3px solid rgb(233, 233, 233);
+    border-radius: 9px;
+    background-color: #fff; /* optional: background for better readability */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* optional hover effect */
+}
+
+/* Hover effect for interactivity (optional) */
+.case-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.case-card h5 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    text-align: left; /* you can use center on mobile if preferred */
+}
+
+.case-card hr {
+    color: var(--primary-color);
+    background-color: var(--primary-color);
+    border: none;
+    height: 4px;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.case-card p {
+    margin-bottom: 0.75rem;
+    text-align: justify; /* makes paragraphs easier to read */
+    font-size: 1rem;
+}
+
+.case-card ul {
+   
+    margin-top: 0.5rem;
+}
+
+.case-card ul li {
+    margin-bottom: 0.5rem;
+    text-align: left;
+    font-size: 1rem;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .case-card {
+        padding: 20px;
+    }
+
+    .case-card h5 {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    .case-card p, .case-card ul li {
+        font-size: 0.95rem;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .case-card {
+        padding: 15px;
+    }
+
+    .case-card h5 {
+        font-size: 1rem;
+    }
+
+    .case-card p, .case-card ul li {
+        font-size: 0.9rem;
+    }
+}
+
+.contact-card{
+    padding:30px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}

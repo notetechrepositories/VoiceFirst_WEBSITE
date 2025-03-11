@@ -6,6 +6,10 @@ import { AboutusComponent } from './Pages/aboutus/aboutus.component';
 import { FeaturesComponent } from './Pages/features/features.component';
 import { HowitworksComponent } from './Pages/howitworks/howitworks.component';
 import { UsecaseComponent } from './Pages/usecase/usecase.component';
+import { CasestudyComponent } from './Pages/casestudy/casestudy.component';
+import { PricingComponent } from './Pages/pricing/pricing.component';
+import { FaqComponent } from './Pages/faq/faq.component';
+import { ContactComponent } from './Pages/contact/contact.component';
 
 
 const routes: Routes = [
@@ -41,6 +45,22 @@ const routes: Routes = [
       {
         path:'use-case',
         component:UsecaseComponent
+      },
+      {
+        path:'our-impact',
+        component:CasestudyComponent
+      },
+      {
+        path:'pricing',
+        component:PricingComponent
+      },
+      {
+        path:'faq',
+        component:FaqComponent
+      },
+      {
+        path:'contact-us',
+        component:ContactComponent
       },
     ],
   },
