@@ -21,7 +21,7 @@
   }
   
   .nav-logo h1 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 3vw, 2.5rem); /* min 1.5rem, fluid at 4vw, max 2.5rem */
     background: var(--primary-color);
     -webkit-background-clip: text;
     background-clip: text;

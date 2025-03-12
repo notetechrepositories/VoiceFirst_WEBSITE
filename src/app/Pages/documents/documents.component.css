@@ -1,36 +1,63 @@
-.content {
-    display: flex;
-    flex-direction: column; /* optional: for vertical alignment */
-    justify-content: center; /* vertical centering */
-    height: 90vh; /* or any height you need */
-    
+/* Parent Section */
+.download {
+    padding: 40px 20px;
   }
-
+  
+  /* Wrapper */
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Content Section */
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 90vh;
+    text-align: center; /* Optional: remove if left-aligned */
+  }
+  
+  /* Title Styling */
   .title {
     font-family: "Saira", sans-serif;
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 800;
     text-transform: uppercase;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1rem;
   }
   
+  /* Subhead */
   .sub-head {
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
     color: #555;
+    margin-bottom: 1.5rem;
   }
   
+  /* Description */
   .description {
-    font-size: 1rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     color: #777;
+    margin-bottom: 1.5rem;
   }
   
+  .content-text {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Button Group */
   .button-group {
     display: flex;
-    justify-content: start;
+    justify-content: center;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Important for mobile! */
   }
   
+  /* Buttons */
   .download-btn {
     padding: 12px 24px;
     font-size: 1rem;
@@ -41,12 +68,76 @@
     border-radius: 8px;
     box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
     transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
   
   .download-btn:hover {
     background-color: #e0a800;
   }
-
-  ul li>a{
-    text-decoration: none;
+  
+  /* Mobile Optimizations */
+  @media (max-width: 768px) {
+    .content {
+      min-height: auto;
+      padding: 20px 0;
+    }
+  
+    .title {
+      font-size: clamp(2rem, 6vw, 3rem);
+    }
+  
+    .sub-head {
+      font-size: 1.2rem;
+    }
+  
+    .description {
+      font-size: 1rem;
+    }
+  
+    .button-group {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  
+    .download-btn {
+      width: 80%;
+      justify-content: center;
+    }
   }
+  
+  @media (max-width: 480px) {
+    .download-btn {
+      width: 100%;
+      font-size: 0.9rem;
+      padding: 10px 20px;
+    }
+  
+    .title {
+      font-size: 2rem;
+    }
+  
+    .sub-head {
+      font-size: 1rem;
+    }
+  
+    .description {
+      font-size: 0.9rem;
+    }
+  }
+
+  .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20%);
+    transition: all .5s;
+}
+.dropdown:hover .dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+}
+  
