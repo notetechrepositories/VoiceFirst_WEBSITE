@@ -29,16 +29,15 @@
 <!-- Mobile Menu -->
 <div class="nav-menu" [class.nav-menu-active]="isMenuOpen">
   <ul class="nav-menu-list">
-    <li><a routerLink="/home">Home</a></li>
-    <li><a routerLink="/about">About</a></li>
-    <li><a routerLink="/what-is">What Is</a></li>
-    <li><a routerLink="/use-case">Use cases</a></li>
-    <li><a routerLink="/our-impact">Our Impact</a></li>
-    <li><a href="#">How it works</a></li>
-    <li><a href="#">Subscription</a></li>
-    <li><a href="#">Blog</a></li>
-    <li><a href="#">FAQ</a></li>
-    <li class="mb-0"><a href="#">Contact us</a></li>  
+    <li><a routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+      <li><a routerLink="/about" routerLinkActive="active-link">About</a></li>
+      <li><a routerLink="/what-is" routerLinkActive="active-link">What Is</a></li>
+      <li><a routerLink="/how-it-works" routerLinkActive="active-link">How it works</a></li>
+      <li><a routerLink="/use-case" routerLinkActive="active-link">Use cases</a></li>
+      <li><a routerLink="/our-impact" routerLinkActive="active-link">Our Impact</a></li>
+      <li><a routerLink="/pricing" routerLinkActive="active-link">Pricing</a></li>
+      <li><a routerLink="/faq" routerLinkActive="active-link">FAQ</a></li>
+      <li><a routerLink="/contact-us" routerLinkActive="active-link">Contact us</a></li>
   </ul>
 </div>
 
@@ -56,20 +55,21 @@
         <p></p>
       </div>
       <div class="vf-footer-col">
-        <h4>company</h4>
+        <h4>Menu</h4>
         <ul>
-          <li><a href="#">about us</a></li>
-          <li><a href="#">our services</a></li>
-          <li><a href="#">privacy policy</a></li>
-          <li><a href="#">visit website</a></li>
+          <li><a routerLink="/what-is" routerLinkActive="active-link">What Is</a></li>
+          <li><a routerLink="/how-it-works" routerLinkActive="active-link">How it works</a></li>
+          <li><a routerLink="/use-case" routerLinkActive="active-link">Industries & Use cases</a></li>
+          <li><a routerLink="/our-impact" routerLinkActive="active-link">Our Impact</a></li>
+          <li><a href="https://www.notetech.com/">visit website</a></li>
         </ul>
       </div>
       <div class="vf-footer-col">
         <h4>get help</h4>
         <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">support</a></li>
-          <li><a href="#">contact us</a></li>
+          <li><a routerLink="/pricing" routerLinkActive="active-link">Pricing & Subscription</a></li>
+          <li><a routerLink="/faq" routerLinkActive="active-link">FAQ</a></li>
+          <li><a routerLink="/contact-us" routerLinkActive="active-link">Contact us</a></li>
         </ul>
       </div>
       <!-- <div class="vf-footer-col">
@@ -84,10 +84,11 @@
       <div class="vf-footer-col">
         <h4>follow us</h4>
         <div class="vf-social-links">
-          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <!-- <a href="#"><i class="fa-brands fa-facebook-f"></i></a> -->
+          <a href="https://www.linkedin.com/company/notetech-software/"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/Notetech_IT"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/notetechsoftware/"><i class="fa-brands fa-instagram"></i></a>
+          
         </div>
       </div>
     </div>

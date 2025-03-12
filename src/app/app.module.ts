@@ -14,6 +14,7 @@ import { CasestudyComponent } from './Pages/casestudy/casestudy.component';
 import { PricingComponent } from './Pages/pricing/pricing.component';
 import { FaqComponent } from './Pages/faq/faq.component';
 import { ContactComponent } from './Pages/contact/contact.component';
+import { ErrorPageComponent } from './Pages/error-page/error-page.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ContactComponent } from './Pages/contact/contact.component';
     CasestudyComponent,
     PricingComponent,
     FaqComponent,
-    ContactComponent
+    ContactComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,

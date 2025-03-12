@@ -10,6 +10,8 @@ import { CasestudyComponent } from './Pages/casestudy/casestudy.component';
 import { PricingComponent } from './Pages/pricing/pricing.component';
 import { FaqComponent } from './Pages/faq/faq.component';
 import { ContactComponent } from './Pages/contact/contact.component';
+import { BlankComponent } from './Layout/blank/blank.component';
+import { ErrorPageComponent } from './Pages/error-page/error-page.component';
 
 
 const routes: Routes = [
@@ -61,6 +63,16 @@ const routes: Routes = [
       {
         path:'contact-us',
         component:ContactComponent
+      },
+    ],
+  },
+  {
+    path: '',
+    component: BlankComponent,
+    children: [
+      {
+        path:'**',
+        component:ErrorPageComponent
       },
     ],
   },

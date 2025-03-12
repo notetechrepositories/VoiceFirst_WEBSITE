@@ -1,6 +1,21 @@
-.hero{
-    height: 60vh;
-    background-color: antiquewhite;
+.hero-banner{
+  height: 60vh;
+  background-color: rgb(255, 255, 255);
+}
+
+.hero-banner .left-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  text-align: start;
+}
+
+.banner-title h1{
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 900;
 }
 
 
