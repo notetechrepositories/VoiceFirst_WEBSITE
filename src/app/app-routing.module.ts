@@ -12,6 +12,7 @@ import { FaqComponent } from './Pages/faq/faq.component';
 import { ContactComponent } from './Pages/contact/contact.component';
 import { BlankComponent } from './Layout/blank/blank.component';
 import { ErrorPageComponent } from './Pages/error-page/error-page.component';
+import { DocumentsComponent } from './Pages/documents/documents.component';
 
 
 const routes: Routes = [
@@ -33,11 +34,11 @@ const routes: Routes = [
         component:HomeComponent
       },
       {
-        path:'about',
+        path:'who-we-are',
         component:AboutusComponent
       },
       {
-        path:'what-is',
+        path:'overview',
         component:FeaturesComponent
       },
       {
@@ -49,7 +50,7 @@ const routes: Routes = [
         component:UsecaseComponent
       },
       {
-        path:'our-impact',
+        path:'casestudy-testimonial',
         component:CasestudyComponent
       },
       {
@@ -64,10 +65,14 @@ const routes: Routes = [
         path:'contact-us',
         component:ContactComponent
       },
+      {
+        path:'download',
+        component:DocumentsComponent
+      },
     ],
   },
   {
-    path: '',
+    path: '**',
     component: BlankComponent,
     children: [
       {

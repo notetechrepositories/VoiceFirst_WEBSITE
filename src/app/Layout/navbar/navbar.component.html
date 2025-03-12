@@ -1,17 +1,18 @@
 <nav class="nav-container">
     <div class="nav-logo">
-      <!-- <img src="assets/images/logo.png" alt="logo" /> -->
-      <h1>VOICE FIRST</h1>
+      <img src="assets/logo/logo-vf.png" alt="logo" />
+      <!-- <h1>OICE FIRST</h1> -->
     </div>
     <ul class="nav-list" [class.nav-active]="isMenuOpen">
       <li><a routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
-      <li><a routerLink="/about" routerLinkActive="active-link">About</a></li>
-      <li><a routerLink="/what-is" routerLinkActive="active-link">What Is</a></li>
+      <li><a routerLink="/overview" routerLinkActive="active-link">Product Overview</a></li>
       <li><a routerLink="/how-it-works" routerLinkActive="active-link">How it works</a></li>
       <li><a routerLink="/use-case" routerLinkActive="active-link">Use cases</a></li>
-      <li><a routerLink="/our-impact" routerLinkActive="active-link">Our Impact</a></li>
+      <li><a routerLink="/casestudy-testimonial" routerLinkActive="active-link">Case Study</a></li>
       <li><a routerLink="/pricing" routerLinkActive="active-link">Pricing</a></li>
+      <li><a routerLink="/who-we-are" routerLinkActive="active-link">Who We Are</a></li>
       <li><a routerLink="/faq" routerLinkActive="active-link">FAQ</a></li>
+      <li><a routerLink="/download" routerLinkActive="active-link">Download</a></li>
       <li><a routerLink="/contact-us" routerLinkActive="active-link">Contact us</a></li>
     
     </ul>
@@ -29,16 +30,38 @@
 <!-- Mobile Menu -->
 <div class="nav-menu" [class.nav-menu-active]="isMenuOpen">
   <ul class="nav-menu-list">
-    <li><a routerLink="/home" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
-      <li><a routerLink="/about" routerLinkActive="active-link">About</a></li>
-      <li><a routerLink="/what-is" routerLinkActive="active-link">What Is</a></li>
-      <li><a routerLink="/how-it-works" routerLinkActive="active-link">How it works</a></li>
-      <li><a routerLink="/use-case" routerLinkActive="active-link">Use cases</a></li>
-      <li><a routerLink="/our-impact" routerLinkActive="active-link">Our Impact</a></li>
-      <li><a routerLink="/pricing" routerLinkActive="active-link">Pricing</a></li>
-      <li><a routerLink="/faq" routerLinkActive="active-link">FAQ</a></li>
-      <li><a routerLink="/contact-us" routerLinkActive="active-link">Contact us</a></li>
+    <li routerLinkActive="active-link" routerLink="/home" [routerLinkActiveOptions]="{ exact: true }" (click)="onMenuClick()">
+      <a >Home</a>
+    </li>
+    <li routerLinkActive="active-link" routerLink="/overview" (click)="onMenuClick()">
+      <a>Product Overview</a>
+    </li>
+    <li routerLinkActive="active-link" routerLink="/how-it-works" (click)="onMenuClick()">
+      <a >How it works</a>
+    </li>
+    <li routerLinkActive="active-link" routerLink="/use-case" (click)="onMenuClick()">
+      <a>Use cases</a>
+    </li>
+    <li routerLinkActive="active-link" routerLink="/casestudy-testimonial" (click)="onMenuClick()">
+      <a>Case Study</a>
+    </li>
+    <li routerLinkActive="active-link" routerLink="/pricing" (click)="onMenuClick()">
+      <a>Pricing</a>
+    </li>
+    <li routerLinkActive="active-link" routerLink="/who-we-are" (click)="onMenuClick()">
+      <a >Who We Are</a>
+    </li>
+    <li routerLinkActive="active-link" routerLink="/faq" (click)="onMenuClick()">
+      <a>FAQ</a>
+    </li>
+    <li routerLinkActive="active-link" routerLink="/download" (click)="onMenuClick()">
+      <a>Download</a>
+    </li>
+    <li routerLinkActive="active-link" routerLink="/contact-us" (click)="onMenuClick()">
+      <a>Contact us</a>
+    </li>
   </ul>
+  
 </div>
 
   <main>
@@ -48,8 +71,8 @@
   <footer class="vf-footer">
     <div class="vf-container vf-row">
       <div class="vf-footer-col">
-        <div class="nav-logo">
-          <!-- <img src="assets/images/logo.png" alt="logo" /> -->
+        <div class="nav-logo flex-column justify-content-start">
+          <img src="assets/logo/logo-vf.png" alt="logo" />
           <h1>VOICE FIRST</h1>
         </div>
         <p></p>
@@ -57,45 +80,41 @@
       <div class="vf-footer-col">
         <h4>Menu</h4>
         <ul>
-          <li><a routerLink="/what-is" routerLinkActive="active-link">What Is</a></li>
+          <li><a routerLink="/overview" routerLinkActive="active-link">Product Overview</a></li>
           <li><a routerLink="/how-it-works" routerLinkActive="active-link">How it works</a></li>
           <li><a routerLink="/use-case" routerLinkActive="active-link">Industries & Use cases</a></li>
-          <li><a routerLink="/our-impact" routerLinkActive="active-link">Our Impact</a></li>
-          <li><a href="https://www.notetech.com/">visit website</a></li>
+          <li><a routerLink="/casestudy-testimonial" routerLinkActive="active-link">Case study</a></li>
         </ul>
       </div>
       <div class="vf-footer-col">
         <h4>get help</h4>
         <ul>
           <li><a routerLink="/pricing" routerLinkActive="active-link">Pricing & Subscription</a></li>
+          <li><a routerLink="/download" routerLinkActive="active-link">Download</a></li>
           <li><a routerLink="/faq" routerLinkActive="active-link">FAQ</a></li>
           <li><a routerLink="/contact-us" routerLinkActive="active-link">Contact us</a></li>
         </ul>
       </div>
-      <!-- <div class="vf-footer-col">
-        <h4>resources</h4>
-        <ul>
-          <li><a href="#">download</a></li>
-          <li><a href="#">changelog</a></li>
-          <li><a href="#">documentation</a></li>
-          <li><a href="#">all versions</a></li>
-        </ul>
-      </div> -->
       <div class="vf-footer-col">
         <h4>follow us</h4>
         <div class="vf-social-links">
-          <!-- <a href="#"><i class="fa-brands fa-facebook-f"></i></a> -->
-          <a href="https://www.linkedin.com/company/notetech-software/"><i class="fa-brands fa-linkedin-in"></i></a>
-          <a href="https://twitter.com/Notetech_IT"><i class="fa-brands fa-x-twitter"></i></a>
-          <a href="https://www.instagram.com/notetechsoftware/"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.linkedin.com/company/notetech-software/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://twitter.com/Notetech_IT" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://www.instagram.com/notetechsoftware/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
           
         </div>
       </div>
     </div>
+    <hr>
+    <div class="d-flex justify-content-center">
+      <p class="right-link">© Copyright 2025 Voice First | Notetech Software. All Rights Reserved.</p>
+    </div>
   </footer>
 
   <!--  -->
-  <a href="#top" class="go-top active" aria-label="Go To Top" data-go-top>
-    <!-- <ion-icon name="arrow-up-outline"></ion-icon> -->
-  </a>
+  <!-- <a  class="go-top active" aria-label="Go To Top" data-go-top (click)="scrollToTop()">
+    <i class="fa-solid fa-angle-up"></i>
+  </a> -->
+
+  <!-- <a class="go-to-top" [ngClass]="{ 'show': showButton }" (click)="scrollToTop()"><i class="fa-solid fa-angle-up"></i></a> -->
   

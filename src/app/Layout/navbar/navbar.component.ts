@@ -23,6 +23,12 @@ export class NavbarComponent {
     }
   }
 
+  onMenuClick(){
+    if(this.isMenuOpen){
+      this.isMenuOpen=false;
+    }
+  }
+
   // Listen for window resize events
   @HostListener('window:resize', ['$event'])
   onResize(event: Event): void {
@@ -34,6 +40,10 @@ export class NavbarComponent {
       this.isMenuOpen = false;
       document.body.classList.remove('no-scroll'); // Reset scrolling
     }
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
 

@@ -1,0 +1,52 @@
+.content {
+    display: flex;
+    flex-direction: column; /* optional: for vertical alignment */
+    justify-content: center; /* vertical centering */
+    height: 90vh; /* or any height you need */
+    
+  }
+
+  .title {
+    font-family: "Saira", sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .sub-head {
+    font-size: 1.5rem;
+    color: #555;
+  }
+  
+  .description {
+    font-size: 1rem;
+    color: #777;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .download-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    background-color: #ffbf00;
+    color: #000;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background-color: #e0a800;
+  }
+
+  ul li>a{
+    text-decoration: none;
+  }

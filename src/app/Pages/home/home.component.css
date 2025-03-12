@@ -4,7 +4,7 @@
   position: relative;
   padding: 130px 0px 140px;
   background-color: #ffffff;
-  height: 80vh;
+  height: 100vh;
 }
 .hero .btn-primary { 
   margin-inline: auto; 
@@ -24,24 +24,54 @@
   color: hsl(231, 100%, 8%);
 }
 .hero-banner { 
-  display: none; 
+  background: url('/assets/images/dashboard-1.png') no-repeat center center;
+  background-size: contain;
+  height: 80vh;
+  width: 100%;
+  display: block;
 }
 
 .hero-content .title {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   font-family: 'Saira', sans-serif;
   font-weight: 800;
-  font-size: clamp(3rem, 6vw, 6rem); /* min, scaling, max */
+  font-size: clamp(2.5rem, 5vw, 4rem);
   text-transform: uppercase;
 }
 
 .hero-content .sub-head {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  font-family: 'Saira', sans-serif;
+  font-family: "Saira", sans-serif;
   font-weight: 700;
-  font-size: clamp(1.6rem, 4vw, 3.4rem);
+  font-size: clamp(1rem, 2.5vw, 2rem);
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+.hero-content .heading-text {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: "Saira", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 4rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.slogan-container{
+  font-family: "Saira", sans-serif;
+  padding:10px 30px;
+  border-left: 4px solid var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.slogan-container p:first-child{
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.slogan-container p:last-child{
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .shape-content {
@@ -52,36 +82,31 @@
   z-index: -1;
 }
 
-@media(min-width: 1024px) {
+/* @media(max-width: 1024px) {
   .hero-content { 
-    max-width: 700px;
-    margin-top: 57px;
+
   }
 
   .hero-banner {
-      display: block;
-      position: absolute;
-      top: 50%;
-      right: 0;
-      transform: translateY(-50%);
-      width: 600px;
-      padding-top: 600px;
-      background: url('/assets/images/dashboard.png') no-repeat center center;
-      background-size: cover;
+     
   }
-}
+} */
 
 @media(max-width: 1200px) {
-  .hero-banner { 
-      right: 100px; 
-      width:300px;
-      display:none
+  .hero{
+    height:80vh;
   }
 }
 
-@media only screen and (max-width: 767px) {
-  .hero { 
-      height: 65vh;
+@media only screen and (max-width: 768px) {
+  .hero-banner {
+    display: none;
+}
+}
+
+@media only screen and (max-width: 560px) {
+  .hero{
+    height:70vh;
   }
 }
 
@@ -125,11 +150,12 @@
 
 
 .feature-section-title {
-  color: var(--st-patricks-blue);
-  font-size: 3rem;
+  color: var(--black);
+  font-size: 2.5rem;
   margin-block-end: 60px;
   max-width: max-content;
   margin-inline: auto;
+  font-weight: 500;
 }
 
 .feature-underline {

@@ -15,6 +15,7 @@ import { PricingComponent } from './Pages/pricing/pricing.component';
 import { FaqComponent } from './Pages/faq/faq.component';
 import { ContactComponent } from './Pages/contact/contact.component';
 import { ErrorPageComponent } from './Pages/error-page/error-page.component';
+import { DocumentsComponent } from './Pages/documents/documents.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { ErrorPageComponent } from './Pages/error-page/error-page.component';
     PricingComponent,
     FaqComponent,
     ContactComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    DocumentsComponent
   ],
   imports: [
     BrowserModule,
