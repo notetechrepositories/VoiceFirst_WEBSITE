@@ -42,8 +42,29 @@ export class NavbarComponent {
     }
   }
 
+  //================ Scrolling=================
+
+  showScroll: boolean = false; // Controls visibility of the button
+  scrollThreshold: number = 200; // Show button after scrolling down 200px
+
+  // Scroll to Top
   scrollToTop(): void {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  // Listen to window scroll events
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const scrollPosition =
+      window.pageYOffset ||
+      document.documentElement.scrollTop ||
+      document.body.scrollTop ||
+      0;
+
+    this.showScroll = scrollPosition > this.scrollThreshold;
   }
 }
 
